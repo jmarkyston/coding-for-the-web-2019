@@ -7,4 +7,4 @@ To initialize the Angular project for the first time, make sure to do the follow
 3. Install dependencies in the project root: `npm install`
 4. Make sure the project builds: `ng build`
 
-To serve the project, run `ng serve`. Optionally, add `--open` to the command to open a new Chrome tab. By default, this is served at localhost:4200.
+To serve the project, run `ng serve`. Optionally, add `--open` to the command to open the project in the browser. By default, this is served at localhost:4200.
