@@ -1,1 +1,16 @@
-LOGIN
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form (ngSubmit)="login()">
+      <mat-error *ngIf="error">{{error}}</mat-error>
+      <mat-form-field>
+        <input [(ngModel)]="email" name="email" matInput type="email" placeholder="Email" />
+      </mat-form-field>
+      <mat-form-field>
+        <input [(ngModel)]="password" name="password" matInput type="password" placeholder="Password" />
+      </mat-form-field>
+      <button type="submit" mat-stroked-button color="primary">Login</button>
+    </form>
+    <button (click)="goToSignUp()" mat-stroked-button>Sign Up</button>
+  </mat-card-content>
+</mat-card>
