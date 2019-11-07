@@ -14,7 +14,7 @@ module.exports = (() => {
         if (err) {
           console.log(`getAccount failed:`, err);
         }
-        resolve(data);
+        resolve(data ? data.Item : null);
       });
     });
   }
