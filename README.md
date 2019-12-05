@@ -31,3 +31,5 @@ To initialize the Serverless (API) project, do the following:
 7. Install API project dependencies: `npm install` in /recipes-api
 8. Update the `serverless.yml` file's `org` value to be your Serverless org.
 9. Deploy: `serverless deploy`
+
+https://72jjb480ol.execute-api.us-east-1.amazonaws.com/dev/login
