@@ -18,6 +18,8 @@ To initialize the Angular project for the first time, do the following:
 3. Install dependencies by running `npm install` in /ng-recipes
 4. Make sure the project builds: `ng build`
 
+If you are running your own Serverless API, replace the URL in /ng-recipes/src/app/services/account.service.ts and the `org` in /recipes-api/serverless.yml.
+
 To serve the project, run `ng serve`. Optionally, add `--open` to the command to open the project in the browser. By default, this is served at localhost:4200.
 
 To initialize the Serverless (API) project, do the following:
@@ -31,5 +33,3 @@ To initialize the Serverless (API) project, do the following:
 7. Install API project dependencies: `npm install` in /recipes-api
 8. Update the `serverless.yml` file's `org` value to be your Serverless org.
 9. Deploy: `serverless deploy`
-
-https://72jjb480ol.execute-api.us-east-1.amazonaws.com/dev/login

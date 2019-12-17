@@ -8,6 +8,9 @@ module.exports = (() => {
     let account = await DynamoDb.getAccount(request.email);
     if (account && account.password === request.password) {
       return {
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        },
         statusCode: 200,
         body: JSON.stringify({
           id: account.email
