@@ -26,7 +26,7 @@ To initialize the Serverless (API) project, do the following:
 
 1. Create an AWS account: https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/
 2. Create a Serverless Framework account: https://dashboard.serverless.com/
-3. Tie your Serverless and AWS accounts together: From the Serverless dashboard, click "Accounts", and then click "default". Under "AWS credential access role", select "Personal AWS Account" and clik "Create a role wizard". Follow the defaults provided to create a new role, and then copy that role's ARN into the Serverless text field and click "save and exit".
+3. Tie your Serverless and AWS accounts together: From the Serverless dashboard, click "Profiles", and then click "default". Under "AWS credential access role", select "Personal AWS Account" and clik "Create a role wizard". Follow the defaults provided to create a new role, and then copy that role's ARN into the Serverless text field and click "save and exit".
 4. Install Node.JS: https://nodejs.org/en/download/
 5. Install Serverless globally: `npm install -g serverless`
 6. Login to Serverless from the CLI: `serverless login`
