@@ -11,6 +11,7 @@ export class SignUpComponent implements OnInit {
   email: string;
   password: string;
   repeatPassword: string;
+  working: boolean;
 
   constructor(
     private router: Router
@@ -31,6 +32,7 @@ export class SignUpComponent implements OnInit {
     }
     else {
       this.error = null;
+      this.working = true;
     }
   }
 

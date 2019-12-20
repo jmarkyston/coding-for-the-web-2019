@@ -17,7 +17,7 @@ export class HttpService {
     // So we'll wrap the result in our own Promise
     return new Promise((res, rej) => {
       let options = {
-        // This header ensure's we'll get a JSON response
+        // This header ensures we'll get a JSON response
         headers: (new HttpHeaders()).append('Content-Type', 'application/json')
       };
       this.http.post<T>(url, body, options)

@@ -4,13 +4,16 @@
     <form (ngSubmit)="login()">
       <mat-error *ngIf="error">{{error}}</mat-error>
       <mat-form-field>
-        <input [(ngModel)]="email" name="email" matInput type="email" placeholder="Email" />
+        <input [disabled]="working" [(ngModel)]="email" name="email" matInput type="email" placeholder="Email" />
       </mat-form-field>
       <mat-form-field>
-        <input [(ngModel)]="password" name="password" matInput type="password" placeholder="Password" />
+        <input [disabled]="working" [(ngModel)]="password" name="password" matInput type="password" placeholder="Password" />
       </mat-form-field>
-      <button type="submit" mat-stroked-button color="primary">Login</button>
+      <button [disabled]="working" type="submit" mat-stroked-button color="primary">
+        Login
+        <fa-icon *ngIf="working" icon="spinner" spin="true"></fa-icon>
+      </button>
     </form>
-    <button (click)="goToSignUp()" mat-stroked-button>Sign Up</button>
+    <button [disabled]="working" (click)="goToSignUp()" mat-stroked-button>Sign Up</button>
   </mat-card-content>
 </mat-card>

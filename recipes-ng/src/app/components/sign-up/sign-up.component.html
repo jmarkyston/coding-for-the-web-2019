@@ -4,17 +4,22 @@
     <form (ngSubmit)="signUp()">
       <mat-error *ngIf="error">{{error}}</mat-error>
       <mat-form-field>
-        <input [(ngModel)]="email" name="email" matInput type="email" placeholder="Email" />
+        <input [disabled]="working" [(ngModel)]="email" name="email" matInput type="email" placeholder="Email" />
       </mat-form-field>
       <mat-form-field>
-        <input [(ngModel)]="password" name="password" matInput type="password" placeholder="Password" />
+        <input [disabled]="working" [(ngModel)]="password" name="password" matInput type="password" placeholder="Password" />
       </mat-form-field>
       <mat-form-field>
-        <input [(ngModel)]="repeatPassword" name="repeatPassword" matInput type="password"
+        <input matInput [disabled]="working" [(ngModel)]="repeatPassword" 
+          name="repeatPassword" 
+          type="password"
           placeholder="Repeat Password" />
       </mat-form-field>
-      <button type="submit" mat-stroked-button color="primary">Sign Up</button>
+      <button [disabled]="working" type="submit" mat-stroked-button color="primary">
+        Sign Up
+        <fa-icon *ngIf="working" icon="spinner" spin="true"></fa-icon>
+      </button>
     </form>
-    <button (click)="goToLogin()" mat-stroked-button>Login</button>
+    <button [disabled]="working" (click)="goToLogin()" mat-stroked-button>Login</button>
   </mat-card-content>
 </mat-card>

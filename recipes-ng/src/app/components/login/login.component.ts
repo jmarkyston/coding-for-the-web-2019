@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   error: string;
   email: string;
   password: string;
+  working: boolean;
 
   constructor(
     private router: Router,
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() { }
 
-  login() {
+  async login() {
     if (!this.email || !this.email.includes('@') || !this.email.includes('.')) {
       this.error = 'Email invalid.';
     }
@@ -28,7 +29,12 @@ export class LoginComponent implements OnInit {
     }
     else {
       this.error = null;
-      this.account.login(this.email, this.password);
+      this.working = true;
+      this.error = await this.account.login(this.email, this.password);
+      this.working = false;
+      if (!this.error) {
+        this.router.navigate(['/search']);
+      }
     }
   }
 
