@@ -1,1 +1,18 @@
-<p>search works!</p>
+<form (ngSubmit)="search()">
+  <mat-form-field>
+    <input [disabled]="working" [(ngModel)]="query" name="query" matInput type="text" placeholder="Search" />
+  </mat-form-field>
+  <button [disabled]="working" type="submit" mat-stroked-button color="primary">
+    Search
+    <fa-icon *ngIf="working" icon="spinner" spin="true"></fa-icon>
+  </button>
+</form>
+<mat-grid-list cols="2" rowHeight="310px">
+  <mat-grid-tile *ngFor="let recipe of recipes">
+    <div>
+      <img [src]="recipe.image" />
+      <b>{{recipe.label}}</b><br />
+      {{recipe.source}}
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

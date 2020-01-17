@@ -31,4 +31,18 @@ export class HttpService {
         )
     });
   }
+
+  get<T>(url: string): Promise<T> {
+    return new Promise((res, rej) => {
+      this.http.get<T>(url)
+        .subscribe(
+          (data: T) => {
+            res(data);
+          },
+          (error: HttpErrorResponse) => {
+            rej(error);
+          }
+        )
+    });
+  }
 }
