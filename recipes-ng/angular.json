@@ -24,9 +24,13 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/lib/foundation/css/foundation.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/lib/foundation/js/vendor/jquery.js",
+              "src/lib/foundation/js/vendor/foundation.min.js"
+            ]
           },
           "configurations": {
             "production": {

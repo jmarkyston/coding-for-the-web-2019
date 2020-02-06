@@ -8,11 +8,11 @@ import { StorageService } from '../storage.service';
 export class AuthGuardService implements CanActivate {
   // only allow the route if we're "logged in"
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    let id = this.storage.id.get();
-    if (!id) {
+    let account = this.storage.account.get();
+    if (!account) {
       this.router.navigate(['/login']);
     }
-    return id ? true : false;
+    return account ? true : false;
   }
 
   constructor(

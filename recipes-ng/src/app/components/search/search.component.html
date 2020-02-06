@@ -7,12 +7,10 @@
     <fa-icon *ngIf="working" icon="spinner" spin="true"></fa-icon>
   </button>
 </form>
-<mat-grid-list cols="2" rowHeight="310px">
-  <mat-grid-tile *ngFor="let recipe of recipes">
-    <div>
-      <img [src]="recipe.image" />
-      <b>{{recipe.label}}</b><br />
-      {{recipe.source}}
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="grid-x">
+  <div *ngFor="let recipe of recipes" class="small-6 medium-4 large-2">
+    <img [src]="recipe.image" />
+    <b>{{recipe.label}}</b><br />
+    {{recipe.source}}
+  </div>
+</div>

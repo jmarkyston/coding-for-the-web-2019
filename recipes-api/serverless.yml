@@ -56,6 +56,20 @@ functions:
           path: login
           method: post
           cors: true
+  favorite:
+    handler: endpoints/account.favorite
+    events:
+      - http:
+          path: recipe/favorite
+          method: post
+          cors: true
+  unfavorite:
+    handler: endpoints/account.unfavorite
+    events:
+      - http:
+          path: recipe/unfavorite
+          method: post
+          cors: true
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
