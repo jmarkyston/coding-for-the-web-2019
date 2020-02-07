@@ -1,20 +1,22 @@
-mat-form-field {
-  width: 60vw;
+.container {
+  text-align: center;
+  padding-top: 5px;
+}
+
+form {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 50%;
+  margin-right: 5px;
+  display: inline-block;
+  margin: 0px;
+  margin-right: 5px;
 }
 
 button {
-  width: 10vw;
-  margin-left: 10px;
-}
-
-mat-grid-tile div { 
-  display: inline-block; 
-  width: 100%; 
-  padding-left: 100px; 
-  text-align: left; 
-} 
- 
-img { 
-  float: left; 
-  margin-right: 10px; 
+  margin: 0px;  
+  margin-top: -3px;
 }

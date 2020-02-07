@@ -1,19 +1,15 @@
-<mat-card>
-  <mat-card-title>Login</mat-card-title>
-  <mat-card-content>
+<div class="card">
+  <div class="card-divider"><h4>Login</h4></div>
+  <div class="card-section">
     <form (ngSubmit)="login()">
-      <mat-error *ngIf="error">{{error}}</mat-error>
-      <mat-form-field>
-        <input [disabled]="working" [(ngModel)]="email" name="email" matInput type="email" placeholder="Email" />
-      </mat-form-field>
-      <mat-form-field>
-        <input [disabled]="working" [(ngModel)]="password" name="password" matInput type="password" placeholder="Password" />
-      </mat-form-field>
-      <button [disabled]="working" type="submit" mat-stroked-button color="primary">
+      <div *ngIf="error" class="callout small">{{error}}</div>
+      <input [(ngModel)]="email" [disabled]="working" name="email" type="email" placeholder="Email" />
+      <input [(ngModel)]="password" [disabled]="working" name="password" type="password" placeholder="Password" />
+      <button [disabled]="working" type="submit" class="button primary">
         Login
         <fa-icon *ngIf="working" icon="spinner" spin="true"></fa-icon>
       </button>
     </form>
-    <button [disabled]="working" (click)="goToSignUp()" mat-stroked-button>Sign Up</button>
-  </mat-card-content>
-</mat-card>
+  </div>
+</div>
+<a (click)="goToSignUp()">Sign Up</a>

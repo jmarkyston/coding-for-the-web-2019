@@ -1,8 +1,6 @@
 <form (ngSubmit)="search()">
-  <mat-form-field>
-    <input [disabled]="working" [(ngModel)]="query" name="query" matInput type="text" placeholder="Search" />
-  </mat-form-field>
-  <button [disabled]="working" type="submit" mat-stroked-button color="primary">
+  <input [(ngModel)]="query" [disabled]="working" name="query" type="text" placeholder="Search" />
+  <button [disabled]="working" type="submit" class="button primary">
     Search
     <fa-icon *ngIf="working" icon="spinner" spin="true"></fa-icon>
   </button>
